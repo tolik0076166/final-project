@@ -1,0 +1,85 @@
+@import "colors";
+@import "../node_modules/foundation-sites/scss/foundation.scss";
+
+.footer{
+    background-color: map-get($grey,background);
+    display: grid;
+    text-align: center;
+
+    .footer-top{
+        display: grid;
+
+        @include breakpoint(large) {
+            display: flex;
+            justify-content: left;
+            background-color: transparent;
+            list-style: disc;
+            margin: 32px 0px 0px 60px;
+          }
+    }
+
+    .footer-topi{
+        display: grid;
+
+        @include breakpoint(large) {
+            display: flex;
+            justify-content: left;
+            background-color: transparent;
+            list-style: disc;
+          }
+    }
+
+    .footer-address{
+        font-weight: 400;
+        font-size: 16px;
+        color: map-get($main, default);;
+    }
+
+    .footer-map{
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 12px;
+        padding-top: 10px;
+        color: map-get($active,default );
+    }
+
+
+    .footer-facebook-icon {
+        font-size: 38px;//Ошыбку выдает
+        color: map-get($active,default );
+        padding-top: 21px;
+
+        &:hover {
+            color: map-get($accent, default);
+          }
+    }
+
+    .footer-phone{
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 16px; 
+        padding-top: 10px;
+        color: map-get($main,alt );
+    }
+
+    .footer-mail{
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 16px;
+        padding-top: 10px;
+        color: map-get($active,default);
+
+        &:hover {
+            color: map-get($accent, default);
+          }
+    }
+
+    .footer-copyright{
+        font-weight: 400;
+        font-size: 16px;
+        padding-top: 30px;
+        margin: 0;
+        color: map-get($grey,text);
+    }
+   
+}

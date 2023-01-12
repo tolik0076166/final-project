@@ -1,0 +1,80 @@
+/**
+ * Foundation for Sites
+ * Version 6.7.5
+ * https://get.foundation
+ * Licensed under MIT Open Source
+ */
+.footer {
+  background-color: #F5F5FA;
+  display: grid;
+  text-align: center;
+}
+.footer .footer-top {
+  display: grid;
+}
+@media print, screen and (min-width: 64em) {
+  .footer .footer-top {
+    display: flex;
+    justify-content: left;
+    background-color: transparent;
+    list-style: disc;
+    margin: 32px 0px 0px 60px;
+  }
+}
+.footer .footer-topi {
+  display: grid;
+}
+@media print, screen and (min-width: 64em) {
+  .footer .footer-topi {
+    display: flex;
+    justify-content: left;
+    background-color: transparent;
+    list-style: disc;
+  }
+}
+.footer .footer-address {
+  font-weight: 400;
+  font-size: 16px;
+  color: #323264;
+}
+.footer .footer-map {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 12px;
+  padding-top: 10px;
+  color: #24A3FF;
+}
+.footer .footer-facebook-icon {
+  font-size: 38px;
+  color: #24A3FF;
+  padding-top: 21px;
+}
+.footer .footer-facebook-icon:hover {
+  color: #F0145A;
+}
+.footer .footer-phone {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  padding-top: 10px;
+  color: #46466E;
+}
+.footer .footer-mail {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  padding-top: 10px;
+  color: #24A3FF;
+}
+.footer .footer-mail:hover {
+  color: #F0145A;
+}
+.footer .footer-copyright {
+  font-weight: 400;
+  font-size: 16px;
+  padding-top: 30px;
+  margin: 0;
+  color: #B3B3BA;
+}
+
+/*# sourceMappingURL=footer.css.map */
