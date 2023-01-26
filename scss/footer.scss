@@ -36,11 +36,24 @@
     }
 
     .footer-map{
+        position: relative;
         text-decoration: none;
         font-weight: 700;
         font-size: 12px;
         padding-top: 10px;
         color: map-get($active,default );
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 6px;
+            height: 6px;
+            transform: translateY(-50%);
+            border-radius: 50%;
+            background-color: map-get($grey, separator);
+          }
     }
 
 
