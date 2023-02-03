@@ -1,0 +1,15 @@
+@import "colors";
+@import "../node_modules/foundation-sites/scss/foundation.scss";
+
+
+.team-page-title{
+color: map-get($gradient, soft);
+font-weight: 700;
+font-size: 38px;
+max-width: 1080px;
+text-align: center;
+}
+
+li{
+    list-style: none;
+}

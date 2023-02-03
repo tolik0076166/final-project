@@ -1,0 +1,43 @@
+@import "colors";
+@import "../node_modules/foundation-sites/scss/foundation.scss";
+
+
+
+.hillel{
+    background-color: map-get($blok-logo,background-hillel);
+}
+.wanna-biz{
+    background-color: map-get($blok-logo,background-wanna-biz);
+}
+.tapgerine{
+    background-color:  map-get($blok-logo,background-tapgerine);
+}
+.three-d-look{
+    background-color: map-get($blok-logo,background-3d-look);
+}
+
+.orangear{
+    background-color: map-get($blok-logo,background-orangear);
+}
+.adtelligent{
+    background-color: map-get($blok-logo,background-adtelligent);
+}
+.clickky{
+    background-color: map-get($blok-logo,background-clickky);
+}
+.eco-leasing{
+    background-color: map-get($blok-logo,background-eco-leasing);
+}
+.infra-tek{
+    background-color: map-get($blok-logo,background-infra-tek);
+}
+.city-park{
+    background-color: map-get($blok-logo,background-city-park);
+}
+.art-print-studio{
+    background-color: map-get($blok-logo,background-art-print-studio);
+}
+.ultimate-card{
+    background-color: map-get($blok-logo,background-ultimate-card);
+}
+
