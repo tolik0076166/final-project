@@ -1,0 +1,53 @@
+@import "colors";
+@import "../node_modules/foundation-sites/scss/foundation.scss";
+
+.about-page{
+    display: grid;
+    background-color: map-get($main,white);
+    justify-items: center;
+
+    
+
+    .top-about-page{
+      max-width: 315px;
+      text-align: left;
+     
+    }
+    .title-about-page{
+        font-weight: 700;
+        font-size: 30px;
+    }
+
+    .text-about-page{
+        font-weight: 400;
+        font-size: 19px;
+    }
+
+    .border-about-page{
+            position: relative;
+            padding-left: 19px;
+            // margin-top: 30px;
+            
+            
+            &::before {
+              content: '';
+              position: absolute;
+              width: 4px;
+              height: 332px;
+              background-color: map-get($grey, separator);
+            }
+           
+    }
+
+    .background-image{
+
+    }
+
+    .description-about-page{
+        max-width: 315px;
+    }
+    
+    .achievements{
+        
+    }
+}

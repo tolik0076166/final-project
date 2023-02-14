@@ -2,14 +2,19 @@
 @import "../node_modules/foundation-sites/scss/foundation.scss";
 
 
+.team-page{
+    display: grid;
+    justify-content: center;
+}
+
 .team-page-title{
-color: map-get($gradient, soft);
 font-weight: 700;
 font-size: 38px;
-max-width: 1080px;
-text-align: center;
+max-width: 315px;
+text-align: left;
 }
 
 li{
     list-style: none;
+    max-width: 315px;
 }

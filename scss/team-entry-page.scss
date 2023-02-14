@@ -1,0 +1,166 @@
+@import "colors";
+@import "../node_modules/foundation-sites/scss/foundation.scss";
+
+
+.team-entry-page{
+    display: grid;
+    background-color: map-get($main,white);
+
+    grid-template:
+    [row1-start] "top top top" [row1-end]
+    [row2-start] "middle middle middle" [row2-end]
+    [row3-start] "bottom bottom bottom" [row3-end];
+    justify-content: center;
+
+    @include breakpoint(medium){
+        grid-template: 
+        [row1-start] "top middle" [row1-end]
+        [row2-start] "bottom bottom" [row2-end];
+        justify-content: center;
+    }
+
+
+      @include breakpoint(large) {
+        grid-template:
+        [row1-start] "top middle" [row1-end]
+        [row2-start] "top bottom" [row2-end];
+      }
+      
+
+    
+    .about-me-team-entry-page{
+        display: grid;
+        grid-area: middle;
+        @include breakpoint(medium){
+            padding-left: 30px;
+            align-content: center;
+        }
+        @include breakpoint(large){
+            display: grid;
+            padding-left: 60px;
+        }
+    }
+            .description-team-entry-page{
+                display: grid;
+            grid-area: bottom;
+            @include breakpoint(large){
+                padding-left: 60px;
+            }
+        }
+
+        .contact-team-entry-page{
+            padding-top: 15px;
+            @include breakpoint(large){
+                display: flex;
+                align-items: center;
+                .team-entry-page-item {
+                    position: relative;
+                    padding-left: 16px;
+                    margin-left: 10px;
+                    &::before {
+                      content: '';
+                      position: absolute;
+                      top: 50%;
+                      left: 0;
+                      width: 6px;
+                      height: 6px;
+                      transform: translateY(-50%);
+                      border-radius: 50%;
+                      background-color: map-get($grey, separator);
+                    }
+                }
+            }
+        }
+   
+    .image{
+        grid-area: top;
+        
+}
+
+img{
+    border-radius: 12px;
+    width: 315px;
+    height: 375px;
+    @include breakpoint(medium){
+       width: 300px;
+    }
+    @include breakpoint(large){
+        width: 400px;
+        height: 500px;
+    }
+}
+
+.name-team-entry-page{
+    font-weight: 700;
+    font-size: 38px;
+    padding-top: 30px;
+    margin: 0;
+    @include breakpoint(large){
+        padding-top: 0;
+    }
+}
+
+.job-title{
+    font-weight: 400;
+    font-size: 14px;
+    padding-top: 0;
+    margin: 0;
+}
+
+
+a{  display: grid;
+    font-weight: 400;
+    font-size: 16px;
+    color: map-get($active, default);
+    padding-top: 10px;
+    @include breakpoint(large){
+        padding-top: 0;
+    }
+}
+
+
+   
+.text-team-entry-page{
+    max-width: 315px;
+    @include breakpoint(medium){
+        max-width: 648px;
+    }
+    @include breakpoint(large){
+        max-width: 620px;
+    }
+}
+ .border-team-entry-page {
+            position: relative;
+            padding-top: 19px;
+            margin-top: 30px;
+            
+            
+            &::before {
+              content: '';
+              position: absolute;
+              width: 315px;
+              height: 4px;
+              background-color: map-get($grey, separator);
+              @include breakpoint(medium){
+                width: 648px;
+            }
+            @include breakpoint(large){
+                width: 620px;
+                left: 60px;
+            }
+            }
+           
+        }
+
+        h3{
+            padding-top: 30px;
+            margin: 0;
+        }
+
+        p{
+            padding-top: 15px;
+            margin: 0;
+        }
+
+}
+

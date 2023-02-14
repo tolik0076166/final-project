@@ -6,33 +6,57 @@
     display: grid;
     text-align: center;
 
-    .footer-top{
-        display: grid;
-
-        @include breakpoint(large) {
-            display: flex;
-            justify-content: left;
-            background-color: transparent;
-            list-style: disc;
-            margin: 32px 0px 0px 60px;
-          }
+    @include breakpoint(medium){
+        justify-content: center;
     }
 
-    .footer-topi{
-        display: grid;
+    @include breakpoint(large) {
+        grid-template:
+        [row1-start] "top bottom" [row1-end]
+        [row2-start] "middle bottom" [row2-end];
+        justify-content: space-between;
+      }
+      
 
+    .footer-top{
+        display: grid;
+        padding-top: 30px;
+        padding-bottom: 21px;
+        
+    @include breakpoint(medium){
+        display: flex;
+        align-items: center;
+                
+    }
         @include breakpoint(large) {
-            display: flex;
-            justify-content: left;
-            background-color: transparent;
-            list-style: disc;
+            grid-area: top;
+            padding-left: 60px;
+            
           }
+
+    }
+
+    .footer-contact{
+        display: grid;
+        padding-bottom: 30px;
+
+        @include breakpoint(medium){
+            display: flex;
+            align-items: center;
+
+        }
+        @include breakpoint(large) {
+           grid-area: middle;
+           padding-left: 60px;
+          }
+
     }
 
     .footer-address{
         font-weight: 400;
         font-size: 16px;
-        color: map-get($main, default);;
+        margin: 0;
+        color: map-get($main, default);
     }
 
     .footer-map{
@@ -43,37 +67,24 @@
         padding-top: 10px;
         color: map-get($active,default );
 
-        &::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 0;
-            width: 6px;
-            height: 6px;
-            transform: translateY(-50%);
-            border-radius: 50%;
-            background-color: map-get($grey, separator);
+        @include breakpoint(large,medium){
+            padding: 0;
           }
     }
 
-
-    .footer-facebook-icon {
-        font-size: 38px;//Ошыбку выдает
-        color: map-get($active,default );
-        padding-top: 21px;
-
-        &:hover {
-            color: map-get($accent, default);
-          }
-    }
-
+    
     .footer-phone{
         text-decoration: none;
         font-weight: 700;
         font-size: 16px; 
         padding-top: 10px;
         color: map-get($main,alt );
+
+        @include breakpoint(large,medium){
+            padding: 0;
+          }
     }
+
 
     .footer-mail{
         text-decoration: none;
@@ -85,14 +96,56 @@
         &:hover {
             color: map-get($accent, default);
           }
+
+          @include breakpoint(large,medium){
+            padding: 0;
+          }
     }
+   
+    
+
+    @include breakpoint(large,medium){
+    .footer-top-item {
+        position: relative;
+        padding-left: 16px;
+        margin-left: 10px;
+        &::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 0;
+          width: 6px;
+          height: 6px;
+          transform: translateY(-50%);
+          border-radius: 50%;
+          background-color: map-get($grey, separator);
+        }
+    }
+  }
+
+    .footer-facebook-icon {
+        font-size: 38px;
+        color: map-get($active,default );
+
+        &:hover {
+            color: map-get($accent, default);
+          }
+    }
+
 
     .footer-copyright{
         font-weight: 400;
         font-size: 16px;
-        padding-top: 30px;
+        padding-bottom: 30px;
         margin: 0;
         color: map-get($grey,text);
+
+        @include breakpoint(large) {
+            grid-area: bottom;
+            padding-right: 60px;
+            padding-top:30px;
+            padding-bottom: 0;
+          }
     }
    
 }
